@@ -6,12 +6,12 @@
 heartItem:
   enabled: true
   name: "&c&lExtra Heart"
-  material: "RED_DYE"
+  material: "NETHER_STAR"
   lore:
     - "&6Gives an extra heart!"
     - "&7&oYou have ${chance}% to get an additional heart added."
-  loseChance: 50
-  addLimit: 0
+  loseChance: 0
+  addLimit: 20
   withdraw-enabled: true
   drop:
     mode: "never"
@@ -19,7 +19,7 @@ heartItem:
 reviveBook:
   enabled: true
   name: "&c&lRevive Book"
-  material: "ENCHANTED_BOOK"
+  material: "BEACON"
   inventory-title: "&a&lRevive player!"
   lore:
     - "&6Revives targeted player!"
@@ -27,7 +27,7 @@ reviveBook:
     - "&aPress on the head to revive."
   unbreakable: false
 
-killHeartLimit: 0
+killHeartLimit: 20
 removeHeartOnlyIfKilledByPlayer: false
 banOn0Hearts: true
 broadcastBanFrom0Hearts: true
@@ -45,15 +45,15 @@ recipe:
       extraHeartItemUseSuccess: 100
       discover: false
       items:
+        - ""
+        - "AMETHYST_SHARD"
+        - ""
+        - "AMETHYST_SHARD"
+        - "TOTEM_OF_UNDYING"
         - "DIAMOND_BLOCK"
+        - ""
         - "DIAMOND_BLOCK"
-        - "DIAMOND_BLOCK"
-        - "DIAMOND_BLOCK"
-        - "NETHER_STAR"
-        - "DIAMOND_BLOCK"
-        - "DIAMOND_BLOCK"
-        - "DIAMOND_BLOCK"
-        - "DIAMOND_BLOCK"
+        - ""
     2:
       recipe-enabled: true
       item: "revive_book"
@@ -63,29 +63,29 @@ recipe:
         - "TOTEM_OF_UNDYING"
         - "TOTEM_OF_UNDYING"
         - "TOTEM_OF_UNDYING"
-        - "ENCHANTED_GOLDEN_APPLE"
-        - "BOOK"
-        - "ENCHANTED_GOLDEN_APPLE"
         - "TOTEM_OF_UNDYING"
+        - "NETHER_STAR"
         - "TOTEM_OF_UNDYING"
-        - "TOTEM_OF_UNDYING"
+        - "OBSIDIAN"
+        - "OBSIDIAN"
+        - "OBSIDIAN"
 
 
 loot:
-  enabled: true
+  enabled: false
   worlds:
     world:
-      chanceForHeartToGenerate: 50
-      heartAddChance: 50
-      chanceForReviveBookToGenerate: 50
+      chanceForHeartToGenerate: 0
+      heartAddChance: 0
+      chanceForReviveBookToGenerate: 0
     world_nether:
-      chanceForHeartToGenerate: 75
-      heartAddChance: 75
-      chanceForReviveBookToGenerate: 75
+      chanceForHeartToGenerate: 0
+      heartAddChance: 0
+      chanceForReviveBookToGenerate: 0
     world_the_end:
-      chanceForHeartToGenerate: 100
-      heartAddChance: 100
-      chanceForReviveBookToGenerate: 100
+      chanceForHeartToGenerate: 0
+      heartAddChance: 0
+      chanceForReviveBookToGenerate: 0
 
 messages:
   heartReceived: "&a&lYou've received an extra heart!"
